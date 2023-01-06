@@ -1,0 +1,33 @@
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, CAT_NAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, cat_name varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE PRODUCT (ID BIGINT NOT NULL, DESCRIPTION VARCHAR(500), IMAGE VARCHAR(255), NAME VARCHAR(255), PRICE DECIMAL(19,2), CATEGORY_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table product (id bigint not null, description varchar(500), image varchar(255), name varchar(255), price decimal(19,2), category_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE USER (ID BIGINT NOT NULL, AGE INTEGER, BALANCE DECIMAL(19,2), CITY VARCHAR(255), EMAIL VARCHAR(255), FIRST_NAME VARCHAR(255), GENDER VARCHAR(255), LAST_NAME VARCHAR(255), PASSWORD VARCHAR(255), PASSWORD_CONFIRM VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user (id bigint not null, age integer, balance decimal(19,2), city varchar(255), email varchar(255), first_name varchar(255), gender varchar(255), last_name varchar(255), password varchar(255), password_confirm varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" not found; SQL statement:
+alter table user drop index UK_ob8kqyqqgmefl0aco34akdtpe [42102-200]
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" not found; SQL statement:
+alter table user add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email) [42102-200]
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" not found; SQL statement:
+alter table user drop index UK_sb8bbouer5wak8vyiiy4pf2bx [42102-200]
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" not found; SQL statement:
+alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username) [42102-200]
+2022-04-28 15:43:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
+alter table product add constraint FK1mtsbur82frn64de7balymq9s foreign key (category_id) references category (id) [42102-200]
+2022-04-28 15:43:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+select next_val as id_val from hibernate_sequence for update [42102-200]
